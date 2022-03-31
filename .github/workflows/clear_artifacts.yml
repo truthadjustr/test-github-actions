@@ -6,8 +6,8 @@ on:
 jobs:
   delete-artifacts:
     runs-on: ubuntu-latest
+    if: env.ACCESS_TOKEN != null
     steps:
-      if: env.ACCESS_TOKEN != null
       - uses: kolpav/purge-artifacts-action@v1
         with:
           token: ${{ secrets.access_token }}
