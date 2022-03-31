@@ -6,3 +6,5 @@ example, adding the secret token key `MySecret` is accessible in the yaml as
 listed as `MYSECRET` in all-caps.  
 
 ### Environment Variable
+
+### Personal Access Token with repo privileges
