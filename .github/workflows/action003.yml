@@ -1,0 +1,19 @@
+name: 'Action 003'
+on:
+  push:
+    branches:
+      - main
+      - develop
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  say-hello:
+    if: github.repository == 'typelogic/test-github-actions'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "*** hello ***"
