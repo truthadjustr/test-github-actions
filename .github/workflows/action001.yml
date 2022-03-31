@@ -4,10 +4,10 @@ on:
     - cron: '* * * * *' # every minute
 
 jobs:
-  say-hello:
+  do-it:
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
+      - name: Do it
         if: env.DOIT != null
         run: echo "*** Doing it ***"
         env:
