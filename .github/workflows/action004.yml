@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Secret
-        run: echo "*** [$MY_SECRET] ***"
+        run: [ ! -z "$MY_SECRET" ] && echo "MY_SECRET=[$MY_SECRET]" || echo "MY_SECRET=undefined"
         env:
-          MY_SECRET: ${{ secrets.my_secret }}
+          MY_SECRET: ${{ secrets.mysecret }}
