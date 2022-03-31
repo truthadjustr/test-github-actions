@@ -8,4 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
-        run: echo "*** hello ***"
+        if: env.DOIT != null
+        run: echo "*** Doing it ***"
+        env:
+          DOIT: ${{ secrets.doit }}
