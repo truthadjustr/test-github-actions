@@ -8,3 +8,10 @@ listed as `MYSECRET` in all-caps.
 ### Environment Variable
 
 ### Personal Access Token with repo privileges
+
+So adding secrets is just declaring any variable that can be propagated into
+the `env` and can be used in the yaml. This variable has no inherent privileges
+attached into them. To create variable values with attached privileges, then 
+you must generate `personal access token` with intended attached priviledges
+and then add them into `secrets` and by then, the value shall have attached
+priviledges which propagates into whatever `action` it is being funneled into.
